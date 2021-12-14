@@ -6,25 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+       
         body
         {
-            margin: 0px;
+           background-color:red;
+          
         }
-        #Fondo {
-            width:600px;
-            height:600px;
-            position:relative;
-            top:0px;
-            left:0px;
+        #portaPaisaje{
+            background-color:red;
+            display: block;
+            margin-top:50%;
+            margin-left: 50%;
+            margin-bottom: 50%;
+            margin-right: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
            
-
-        
+            
         }
+
+      
+
         #logocaja   {
             flex-direction: column-reverse;
         }
-         
+        @media screen and (orientation:landscape) {
             
+        #portaPaisaje{
+            
+            max-width: 1200px;
+            max-height: 800px;
+           
+           
+                   
+        }
+
+        }
+        
+            @media screen and (orientation:portrait) {
+                #portaPaisaje{
+                   
+                    max-width: 600px;
+                    max-height: 900px;
+                    
+                   
+                    
+                 
+                    
+                }
+            }
             
         
         #logoimg {
@@ -41,19 +72,24 @@
 
 <body>
     <picture id="portaPaisaje">
+        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./Horizontal1-1920.heic" type="image/heic">
+        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./Horizontal1-1920.webp" type="image/webp">
+        <source media="(orientation: landscape) and (min-width: 1201px)" srcset="./Horizontal1-1920.jpg" type="image/jpeg">
 
-        <source media="(orientation: portrait) and (min-width: 1201px)" srcset="./Vertical1200.heic" type="image/heic">
-        <source media="(orientation: portrait) and (min-width: 1201px)" srcset="./Vertical1200.webp" type="image/webp">
-        <source media="(orientation: portrait) and (min-width: 1201px)" srcset="./Vertical1200.jpg" type="image/jpeg">
-        <source media="(orientation: portrait) and (min-width:601px)" srcset="./vertical2-600.heic" type="image/heic">
-        <source media="(orientation: portrait) and (min-width:601px)" srcset="./vertical2-600.webp" type="image/webp">
-        <source media="(orientation: portrait) and (min-width:601px)" srcset="./vertical2-600.jpg" type="image/jpg">
-        <source media="(orientation: landscape) and (min-width: 1921px)" srcset="./Horizontal1-1920.heic" type="image/heic">
-        <source media="(orientation: landscape) and (min-width: 1901px)" srcset="./Horizontal1-1920.webp" type="image/webp">
-        <source media="(orientation: landscape) and (min-width: 1901px)" srcset="./Horizontal1-1920.jpg" type="image/jpeg">
-        <source media="(orientation: landscape) and (min-width:801px)" srcset="./Horizontal2-800.heic" type="image/heic">
-        <source media="(orientation: landscape) and (min-width:801px)" srcset="./Horizontal2-800.webp" type="image/webp">
-        <source media="(orientation: landscape) and (min-width:801px)" srcset="./Horizontal2-800.jpg" type="image/jpg">
+        <source media="(orientation: portrait) and (min-width: 801px)" srcset="./Vertical1200.heic" type="image/heic">
+        <source media="(orientation: portrait) and (min-width: 801px)" srcset="./Vertical1200.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width: 801px)" srcset="./Vertical1200.jpg" type="image/jpeg">
+
+        <source media="(orientation: landscape) and (min-width:602px)" srcset="./Horizontal2-800.heic" type="image/heic">
+        <source media="(orientation: landscape) and (min-width:602px)" srcset="./Horizontal2-800.webp" type="image/webp">
+        <source media="(orientation: landscape) and (min-width:602px)" srcset="./Horizontal2-800.jpg" type="image/jpg">
+
+        <source media="(orientation: portrait) and (min-width:400px)" srcset="./vertical2-600.heic" type="image/heic">
+        <source media="(orientation: portrait) and (min-width:400px)" srcset="./vertical2-600.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width:400px)" srcset="./vertical2-600.jpg" type="image/jpg">
+
+       
+
         <img landscape
             id="fotoPaisaje" 
             alt="Foto de un paisaje" 
